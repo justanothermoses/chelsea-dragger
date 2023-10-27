@@ -15,13 +15,13 @@ She said, you know me well...**
 
 ## install
 
-Install package via
+Install package via npm
 
 ```sh
 npm install chelsea-dragger
 ```
 
-Add it to your vue app vie import and `use()` method of your app instance:
+Import it to your script with `import` or `require` and add it to your vue app via `use()` method of your app instance:
 
 ```js
 import ChelseaDragger from "chelsea-dragger";
@@ -30,10 +30,10 @@ createApp(App).use(ChelseaDragger).mount("#app");
 
 ## General Usage
 
-The following example use this array of items:
+The following examples use this array of items:
 
 **Note**:
-Keep in mind that vue need a unique key in a loop, if the items may be rearranged.
+Keep in mind that [vue needs a unique key in a loop, if the items may change](https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key).
 For this reason all items have a unique `id`.
 
 ```js
@@ -68,8 +68,8 @@ const items = [
 
 ### Drag
 
-To register an Element as draggable, use the directive `v-draggable`.
-This directive requires a value, that is passed as a reference to your [callback function and drop event](#drop), when dropped in a Drop Zone.
+To register an element as draggable, use the directive `v-draggable`.
+This directive requires a value, that is passed as a reference to your [callback function and drop event](#drop), when dropped in a drop zone.
 
 ```js
       <div
@@ -83,12 +83,12 @@ This directive requires a value, that is passed as a reference to your [callback
 
 ### Drop
 
-To define an area, where items can be dropped, use The `DropZone` Component.
-You Can just wrap it around any other elements, to mark this area as DropZone.
+To define an area, where items can be dropped, use The `DropZone` component.
+You can just wrap it around any other elements, to mark this area as drop zone.
 
-When an Item is dropped, the DropZone will emit a `drop` event and invoke an optional `callback` property. Both cases receive one argument, which is a **reference** to [the value that was passed when registering a draggable element via `v-directive`](#drag).
+When an item is dropped, the drop zone will emit a `drop` event and invoke an optional `callback` property. In both cases one argument is passed, which is a **reference** to [the value that was passed when registering a draggable element via `v-directive`](#drag).
 
-The example below shows two lists that update the items listId. The first list uses the `callback` property, the second one the `drop`-event.
+The example below shows two lists that update the items `listId`. The first list uses the `callback` property, the second one the `drop`-event.
 
 ```js
     <DropZone :callback="(item) => (item.listId = 1)">
