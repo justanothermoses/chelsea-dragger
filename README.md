@@ -111,11 +111,3 @@ The example below shows two lists that update the items listId. The first list u
 ```js
 import "chelsea-dragger/style";
 ```
-
- <!-- Customize classes -->
-
-### Advanced Usage
-
-#### Disable dragging by condition
-
-#### Group items and allow/deny dropping 
