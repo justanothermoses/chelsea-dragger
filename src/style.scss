@@ -1,0 +1,12 @@
+.chelsea-dragger__drop-zone {
+  min-height: 3em;
+}
+
+.chelsea-dragger__draggable {
+  cursor: grab;
+
+  &.chelsea-dragger__draggable--dragging {
+    cursor: grabbing;
+  }
+}
+
