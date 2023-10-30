@@ -1,36 +1,36 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 
 const items = ref([
   {
     id: 1,
-    label: "Some Item",
+    label: 'Some Item',
     listId: 1,
   },
   {
     id: 2,
-    label: "Another Item",
+    label: 'Another Item',
     listId: 2,
   },
   {
     id: 3,
-    label: "Also an Item",
+    label: 'Also an Item',
     listId: 2,
   },
   {
     id: 4,
-    label: "One more Item",
+    label: 'One more Item',
     listId: 1,
   },
   {
     id: 5,
-    label: "Okay still one more...",
+    label: 'Okay still one more...',
     listId: 1,
   },
-]);
+])
 
 const getItemsByList = (listId: number) =>
-  items.value.filter((item) => item.listId === listId);
+  items.value.filter((item) => item.listId === listId)
 </script>
 
 <template>
