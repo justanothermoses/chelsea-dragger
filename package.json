@@ -1,5 +1,25 @@
 {
   "name": "chelsea-dragger",
+  "homepage": "https://github.com/justanothermoses/chelsea-dragger",
+  "author": {
+    "name": "Moses Otten",
+    "url": "https://github.com/justanothermoses"
+  },
+  "description": "Vue plugin to implement drag and drop",
+  "keywords": [
+    "vue",
+    "plugin",
+    "drag-and-drop",
+    "drag",
+    "drop",
+    "vue-plugin",
+    "vue-use",
+    "vue-directive",
+    "vue-component",
+    "vuejs",
+    "vue-js",
+    "component"
+  ],
   "version": "0.0.3",
   "type": "module",
   "files": [
