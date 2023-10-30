@@ -1,19 +1,19 @@
-# Chelsea dragger
+# Chelsea Dragger
 
 🎶<br>
-**Do-do-do, do-do-do<br>
+**[Do-do-do, do-do-do<br>
 Do-do-do-do-do-do-do<br>
-Do-do-do, do-do... DOOOO ?!?**
+Do-do-do, do-do...]() DOOOO ?!?**
 
 You know when you're enjoying the vue and suddenly your good mood is interrupted by the task of implementing drag and drop?<br>
 Don't worry! We got you covered.🤝 <br>
 Just follow the instructions below and go on with your good-mood-singy-thing! 🎶
 
-**Do-do-do-do-do<br>
+**[Do-do-do-do-do<br>
 Well, you must be a girl with shoes like that<br>
-She said, you know me well...**
+She said, you know me well...]()**
 
-## install
+## Install
 
 Install package via npm
 
@@ -24,15 +24,18 @@ npm install chelsea-dragger
 Import it to your script with `import` or `require` and add it to your vue app via `use()` method of your app instance:
 
 ```js
-import ChelseaDragger from "chelsea-dragger";
-createApp(App).use(ChelseaDragger).mount("#app");
+import ChelseaDragger from 'chelsea-dragger'
+createApp(App).use(ChelseaDragger).mount('#app')
 ```
 
 ## General Usage
 
-The following examples use this array of items:
+The following example uses the array of items shown below.
 
-**Note**:
+All items in this array are assigned to one of two lists by property `listId`.
+The examples will implement draga and drop to update the an items `listId` by dragging the item and dropping it in the new list.
+
+**Important**:
 Keep in mind that [vue needs a unique key in a loop, if the items may change](https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key).
 For this reason all items have a unique `id`.
 
@@ -40,30 +43,30 @@ For this reason all items have a unique `id`.
 const items = [
   {
     id: 1,
-    label: "Some Item",
+    title: 'Some Item',
     listId: 1,
   },
   {
     id: 2,
-    label: "Another Item",
+    title: 'Another Item',
     listId: 2,
   },
   {
     id: 3,
-    label: "Also an Item",
+    title: 'Also an Item',
     listId: 2,
   },
   {
     id: 4,
-    label: "One more Item",
+    title: 'One more Item',
     listId: 1,
   },
   {
     id: 5,
-    label: "Okay still one more...",
+    title: 'Okay still one more...',
     listId: 1,
   },
-];
+]
 ```
 
 ### Drag
@@ -92,22 +95,42 @@ The example below shows two lists that update the items `listId`. The first list
 
 ```js
     <DropZone :callback="(item) => (item.listId = 1)">
-      <div v-draggable="item" v-for="item in items.filter(item => item.listId === 1)" :key="item.id">
-        {{ item.label }}
+      <div
+        v-draggable="item"
+        v-for="item in items.filter(item => item.listId === 1)"
+        :key="item.id"
+      >
+        {{ item.title }}
       </div>
     </DropZone>
 
     <DropZone @drop="(item) => (item.listId = 2)">
-      <div v-draggable="item" v-for="item in items.filter(item => item.listId === 2)" :key="item.id">
-        {{ item.label }}
+      <div
+        v-draggable="item"
+        v-for="item in items.filter(item => item.listId === 2)"
+        :key="item.id"
+      >
+        {{ item.title }}
       </div>
     </DropZone>
 ```
 
 ### Styles
 
-#### Add base styling
+#### Base styling
+
+To add base styling
 
 ```js
-import "chelsea-dragger/style";
+import 'chelsea-dragger/style'
 ```
+
+#### Customize base styles
+
+Overwrite the following classes to customize [base styles](#add-base-styling)
+
+| Class                                   | Description                                                                        |
+| --------------------------------------- | ---------------------------------------------------------------------------------- |
+| .chelsea-dragger\_\_drop-zone           | Applied to drop zones to add required styles (e.g. min-height).                    |
+| .chelsea-dragger\_\_draggable           | Applied to all items, that are marked draggable by [v-draggable](#drag) directive. |
+| .chelsea-dragger\_\_draggable--dragging | Applied to draggable items while being dragged and removed when dropped            |
