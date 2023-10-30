@@ -1,7 +1,7 @@
-import vueChelseaDragger from "../src/vue";
-import "../src/style.scss";
+import vueChelseaDragger from '../src/vue'
+import '../src/style.scss'
 
-import { createApp } from "vue";
-import App from "./App.vue";
+import { createApp } from 'vue'
+import App from './App.vue'
 
-createApp(App).use(vueChelseaDragger).mount("#app");
+createApp(App).use(vueChelseaDragger).mount('#app')

@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { getAndRemoveFromStore } from "../shared";
+import { getAndRemoveFromStore } from '../shared'
 
-const emit = defineEmits(["drop"]);
+const emit = defineEmits(['drop'])
 
 const { callback } = defineProps({
   callback: {
     type: Function,
     required: false,
   },
-});
+})
 
 const onDrop = (event: DragEvent) => {
-  if (!event.dataTransfer) return;
-  const storeIdentifier = event.dataTransfer.getData("identifier");
-  const data = getAndRemoveFromStore(storeIdentifier);
+  if (!event.dataTransfer) return
+  const storeIdentifier = event.dataTransfer.getData('identifier')
+  const data = getAndRemoveFromStore(storeIdentifier)
 
-  emit("drop", data);
-  if (callback) callback(data);
-};
+  emit('drop', data)
+  if (callback) callback(data)
+}
 </script>
 
 <template>
