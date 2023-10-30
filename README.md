@@ -3,7 +3,7 @@
 🎶<br>
 **[Do-do-do, do-do-do<br>
 Do-do-do-do-do-do-do<br>
-Do-do-do, do-do...]() DOOOO ?!?**
+Do-do-do, do-do...](https://youtu.be/sEXHeTcxQy4?feature=shared&t=33) DOOOO ?!?**
 
 You know when you're enjoying the vue and suddenly your good mood is interrupted by the task of implementing drag and drop?<br>
 Don't worry! We got you covered.🤝 <br>
@@ -11,7 +11,7 @@ Just follow the instructions below and go on with your good-mood-singy-thing! �
 
 **[Do-do-do-do-do<br>
 Well, you must be a girl with shoes like that<br>
-She said, you know me well...]()**
+She said, you know me well...](https://youtu.be/sEXHeTcxQy4?feature=shared&t=33)**
 
 ## Install
 
