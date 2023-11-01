@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getAndRemoveFromStore } from '../shared'
+import { getAndRemoveFromStore, classes } from '../shared'
 
 const emit = defineEmits(['drop'])
 
@@ -22,7 +22,7 @@ const onDrop = (event: DragEvent) => {
 
 <template>
   <div
-    class="chelsea-dragger__drop-zone"
+    :class="classes.dropZone"
     @drop="onDrop"
     @dragenter.prevent
     @dragover.prevent

@@ -8,7 +8,8 @@ type Store = {
 
 const store: Store = {}
 
-const classes = {
+export const classes = {
+  dropZone: 'chelsea-dragger__drop-zone',
   draggable: 'chelsea-dragger__draggable',
   draggableIsDragging: 'chelsea-dragger__draggable--dragging',
 }
