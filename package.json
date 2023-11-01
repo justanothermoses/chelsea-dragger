@@ -34,6 +34,9 @@
     "test:gen": "playwright codegen"
   },
   "homepage": "https://github.com/justanothermoses/chelsea-dragger",
+  "bugs": {
+    "url": "https://github.com/justanothermoses/chelsea-dragger/issues"
+  },
   "author": {
     "name": "Moses Otten",
     "url": "https://github.com/justanothermoses"
