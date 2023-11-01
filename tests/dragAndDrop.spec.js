@@ -27,7 +27,7 @@ async function getItemClassArray(item) {
 }
 
 test('Drag and drop', async ({ page }) => {
-  await page.goto(`http://localhost:${port}`)
+  await page.goto(`http://127.0.0.1:${port}`)
 
   const lists = page.locator(`.${classes.dropZone}`)
 
