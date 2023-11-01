@@ -1,6 +1,42 @@
 {
   "name": "chelsea-dragger",
+  "version": "0.0.3",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/chelsea-dragger.umd.cjs",
+  "module": "./dist/chelsea-dragger.js",
+  "exports": {
+    ".": {
+      "require": "./dist/chelsea-dragger.umd.cjs",
+      "import": "./dist/chelsea-dragger.js"
+    },
+    "./style": "./dist/style.css"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "sass": "^1.69.5",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  },
+  "scripts": {
+    "dev": "vite ./example -c vite.config.ts --open",
+    "build": "vue-tsc && vite build",
+    "test": "playwright install && playwright test",
+    "test:watch": "PWTEST_WATCH=1 playwright test",
+    "test:ui": "playwright test --ui",
+    "test:gen": "playwright codegen"
+  },
   "homepage": "https://github.com/justanothermoses/chelsea-dragger",
+  "bugs": {
+    "url": "https://github.com/justanothermoses/chelsea-dragger/issues"
+  },
   "author": {
     "name": "Moses Otten",
     "url": "https://github.com/justanothermoses"
@@ -19,38 +55,5 @@
     "vuejs",
     "vue-js",
     "component"
-  ],
-  "version": "0.0.3",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/chelsea-dragger.umd.cjs",
-  "module": "./dist/chelsea-dragger.js",
-  "exports": {
-    ".": {
-      "require": "./dist/chelsea-dragger.umd.cjs",
-      "import": "./dist/chelsea-dragger.js"
-    },
-    "./style": "./dist/style.css"
-  },
-  "scripts": {
-    "dev": "vite ./example -c ./vite.config.ts --open",
-    "build": "vue-tsc && vite build",
-    "test": "playwright test",
-    "test:watch": "PWTEST_WATCH=1 playwright test",
-    "test:ui": "playwright test --ui",
-    "test:gen": "playwright codegen"
-  },
-  "dependencies": {
-    "vue": "^3.3.4"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.39.0",
-    "@vitejs/plugin-vue": "^4.4.0",
-    "sass": "^1.69.5",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "vue-tsc": "^1.8.5"
-  }
+  ]
 }

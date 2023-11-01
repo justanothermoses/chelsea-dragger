@@ -11,7 +11,7 @@ Just follow the instructions below and go on with your good-mood-singy-thing! ðŸ
 
 **[Do-do-do-do-do<br>
 Well, you must be a girl with shoes like that<br>
-She said, you know me well...](https://youtu.be/sEXHeTcxQy4?feature=shared&t=33)**
+She said, you know me well...](https://youtu.be/sEXHeTcxQy4?feature=shared&t=55)**
 
 ## Install
 
