@@ -33,7 +33,7 @@ createApp(App).use(ChelseaDragger).mount('#app')
 The following example uses the array of items shown below.
 
 All items in this array are assigned to one of two lists by property `listId`.
-The examples will implement draga and drop to update the an items `listId` by dragging the item and dropping it in the new list.
+The examples will implement drag-and-drop to update the an items `listId` by dragging the item and dropping it in the new list.
 
 **Important**:
 Keep in mind that [vue needs a unique key in a loop, if the items may change](https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key).
