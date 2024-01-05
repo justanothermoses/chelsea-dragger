@@ -1,6 +1,7 @@
 {
   "name": "chelsea-dragger",
   "version": "0.0.6",
+  "license": "MIT",
   "type": "module",
   "files": [
     "dist"
